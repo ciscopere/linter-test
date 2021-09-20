@@ -1,0 +1,34 @@
+name: Acilia Backend Linters
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Lint Code Base
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Composer install
+        uses: php-actions/composer@v5
+        with:
+          command: install
+          args: --ignore-platform-reqs --no-scripts --dev
+          version: 2
+          php_version: 7.4
+
+      - name: Lint
+        uses: github/super-linter@v4.2.2
+        env:
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_PHP_BUILTIN: true
+          VALIDATE_PHP_PHPCS: true
+          VALIDATE_PHP_PHPSTAN: true
+          DEFAULT_BRANCH: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
