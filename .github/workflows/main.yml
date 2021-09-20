@@ -27,6 +27,7 @@ jobs:
         uses: github/super-linter@v4.2.2
         env:
           VALIDATE_ALL_CODEBASE: false
+          FILTER_REGEX_INCLUDE: .*src/.*
           VALIDATE_PHP_BUILTIN: true
           VALIDATE_PHP_PHPCS: true
           VALIDATE_PHP_PHPSTAN: true
