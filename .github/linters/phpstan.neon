@@ -1,1 +1,8 @@
-phpstan.neon
+parameters:
+    level: 7
+    paths:
+        - src
+    checkMissingIterableValueType: false
+    excludes_analyse:
+        - src/DependencyInjection/Configuration.php
+        - src/Command/Tools/FixBalanceCommand.php
