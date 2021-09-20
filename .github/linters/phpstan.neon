@@ -6,4 +6,5 @@ parameters:
     excludes_analyse:
         - src/DependencyInjection/Configuration.php
         - src/Command/Tools/FixBalanceCommand.php
+        - tests/*
 
