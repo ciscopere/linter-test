@@ -6,6 +6,4 @@ parameters:
     excludes_analyse:
         - src/DependencyInjection/Configuration.php
         - src/Command/Tools/FixBalanceCommand.php
-    bootstrapFiles:
-        - bin/.phpunit/phpunit/vendor/autoload.php
 
