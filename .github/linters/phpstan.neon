@@ -1,8 +1,5 @@
 parameters:
     level: 7
     paths:
-        - src
+        - /github/workspace/src
     checkMissingIterableValueType: false
-    excludes_analyse:
-        - src/DependencyInjection/Configuration.php
-        - src/Command/Tools/FixBalanceCommand.php
