@@ -30,5 +30,5 @@ jobs:
           VALIDATE_PHP_BUILTIN: true
           VALIDATE_PHP_PHPCS: true
           VALIDATE_PHP_PHPSTAN: true
-          DEFAULT_BRANCH: main
+          DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
